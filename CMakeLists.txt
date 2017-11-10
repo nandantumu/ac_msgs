@@ -10,6 +10,7 @@ project(ac_msgs)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -105,7 +106,8 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES ac_msgs
 #  CATKIN_DEPENDS rospy std_msgs
-#  DEPENDS system_lib
+  DEPENDS message_runtime
+  DEPENDS std_msgs
 )
 
 ###########
